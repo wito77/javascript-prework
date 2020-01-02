@@ -31,6 +31,14 @@ body::before {
   font-size: 48px;
 }
 
+.container p > a {
+  color: #000000;
+}
+
+.container p > a:hover {
+  color: #fff;
+}
+
 .container h3 {
   font-size: 24px;
 }
