@@ -7,7 +7,7 @@ buttonScissors = document.getElementById('button-scissors');
 function buttonClicked(argButtonName) {
     clearMessages();
     console.log(argButtonName + ' został kliknięty');
-    displayResult(playerMove, computerMove);
+    displayResult(argButtonName, computerMove);
 }
 
 var argComputerMove, argMoveId, argPlayerMove, computerMove, playerInput, playerMove, randomNumber, x;
