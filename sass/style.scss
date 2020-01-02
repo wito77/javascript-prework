@@ -1,0 +1,84 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    position: relative;
+    background-image: url(../images/black-and-white-people-bar-men-4417.jpg);
+    background-position: center;
+}
+
+body::before {
+    position: absolute;
+    content: "";
+    background: rgba(245, 245, 245, 0.7);
+    width: 100%;
+    height: 100%;
+    display: block;
+    top: 0;
+    left: 0;
+}
+
+.container {
+    text-align: center;
+    padding: 50px;
+    color: #525252;
+    position: relative;
+
+    h1 {
+        font-size: 48px;
+    }
+
+    h3 {
+        font-size: 24px;
+    }
+
+    #buttons {
+        padding: 12px;
+
+        button {
+            height: 70px;
+            width: 180px;
+            font-size: 24px;
+            margin: 0 20px;
+            color: white;
+            background-color: #525252;
+            border: 2px solid #525252;
+            border-radius: 12px;
+            transition: .4s;
+
+            i {
+                margin-right: 12px;
+            }
+        }
+
+        button:hover {
+            color: #525252;
+            background-color: #fff;
+        }
+
+    }
+
+    // #buttons::after {
+    //     position: absolute;
+    //     content: "";
+    //     bottom: 20%;
+    //     left: 50%;
+    //     width: 100px;
+    //     height: 5px;
+    //     transform: translateX(-50%);
+    //     background: #525252;
+    // }
+
+    #messages {
+        font-size: 22px;
+
+        div:first-child {
+            margin-top: 60px;
+            margin-bottom: 10px;
+            font-weight: bold;
+            font-size: 26px;
+        }
+    }
+}
