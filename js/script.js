@@ -1,4 +1,4 @@
-const argButtonName, buttonRock, buttonPaper, buttonScissors;
+let argButtonName, buttonRock, buttonPaper, buttonScissors;
 
 buttonRock = document.getElementById('button-rock');
 buttonPaper = document.getElementById('button-paper');
@@ -20,7 +20,7 @@ function buttonClicked(argButtonName) {
 
 }
 
-var argComputerMove, argMoveId, argPlayerMove, computerMove, playerInput, playerMove, randomNumber, x;
+let argComputerMove, argMoveId, argPlayerMove, computerMove, playerInput, playerMove, randomNumber, x;
 
 function getMoveName(argMoveId) {
     console.log('wywołano funkcję getMoveName z argumentem: ' + argMoveId);
