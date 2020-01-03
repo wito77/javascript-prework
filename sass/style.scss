@@ -25,6 +25,8 @@ body::before {
     padding: 50px;
     color: #525252;
     position: relative;
+    width: 50%;
+    margin: 0 auto;
 
     h1 {
         font-size: 48px;
@@ -55,6 +57,7 @@ body::before {
             border: 2px solid #525252;
             border-radius: 12px;
             transition: .4s;
+            cursor: pointer;
 
             i {
                 margin-right: 12px;
