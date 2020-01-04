@@ -1,14 +1,12 @@
-let argButtonName, buttonRock, buttonPaper, buttonScissors;
+let argButtonName;
 
-buttonRock = document.getElementById('button-rock');
-buttonPaper = document.getElementById('button-paper');
-buttonScissors = document.getElementById('button-scissors');
+const buttonRock = document.getElementById('button-rock');
+const buttonPaper = document.getElementById('button-paper');
+const buttonScissors = document.getElementById('button-scissors');
 
 function buttonClicked(argButtonName) {
     clearMessages();
     console.log(argButtonName + ' został kliknięty');
-    displayResult(argButtonName, computerMove);
-
 
     playerMove = argButtonName;
     console.log('wybór ruchu gracza to: ' + playerInput);
@@ -18,9 +16,11 @@ function buttonClicked(argButtonName) {
     computerMove = getMoveName(randomNumber);
     console.log('ruch komputera to: ' + computerMove);
 
+    displayResult(argButtonName, computerMove);
 }
 
-let argComputerMove, argMoveId, argPlayerMove, computerMove, playerInput, playerMove, randomNumber, x;
+let argComputerMove, argMoveId, argPlayerMove, computerMove, playerInput, playerMove, randomNumber, x, playerScore = 0,
+    computerScore = 0;
 
 function getMoveName(argMoveId) {
     console.log('wywołano funkcję getMoveName z argumentem: ' + argMoveId);
@@ -40,16 +40,21 @@ function displayResult(argPlayerMove, argComputerMove) {
     console.log('wywołano funkcję displayResults z argumentami: ' + argPlayerMove + ', ' + argComputerMove);
     if (argPlayerMove == 'Papier' && argComputerMove == 'Kamień') {
         printMessage('Wygrywasz!');
+        playerScore++;
     } else if (argPlayerMove == 'Kamień' && argComputerMove == 'Nożyce') {
         printMessage('Wygrywasz!');
+        playerScore++;
     } else if (argPlayerMove == 'Nożyce' && argComputerMove == 'Papier') {
         printMessage('Wygrywasz!');
+        playerScore++;
     } else if (argPlayerMove == argComputerMove) {
         printMessage('Remis!');
     } else {
         printMessage('Przegrywasz :(');
+        computerScore++;
     }
     printMessage('Zagrałem ' + argComputerMove + ', a Ty ' + argPlayerMove);
+    printMessage('Mój wynik to: ' + computerScore + ', a Twój: ' + playerScore);
 }
 
 
